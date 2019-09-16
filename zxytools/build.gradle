@@ -39,5 +39,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //design
-    implementation 'com.android.support:design:29.0.0'
+    api 'com.android.support:design:29.0.0'
 }
