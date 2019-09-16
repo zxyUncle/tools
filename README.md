@@ -47,7 +47,7 @@ Step 2. Add the dependency
      alertDialogUtils =
             AlertDialogUtils
                 .build(this)
-                .setTransparency(0.4f)
+                .setTransparency(0.4f)  //设置窗口透明度，默认0.5
                 .showStyle1(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
                     override fun onClickDialog(view: View) {
                         when (view.id) {
@@ -68,7 +68,7 @@ Step 2. Add the dependency
     alertDialogUtils =
             AlertDialogUtils
                 .build(this)
-                .setTransparency(0.8f)
+                .setTransparency(0.8f)  //设置窗口透明度，默认0.5
                 .showStyle2(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
                     override fun onClickDialog(view: View) {
                         when (view.id) {
