@@ -64,7 +64,8 @@ Step 2. Add the dependency
 
 样式2-自带Dialog
 ------------
-alertDialogUtils =
+
+    alertDialogUtils =
             AlertDialogUtils
                 .build(this)
                 .setTransparency(0.8f)
