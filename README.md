@@ -64,8 +64,8 @@ Step 2. Add the dependency
                         alertDialogUtils.cancel()
                     }
                 })
-  ![简单样式1][1]
 
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog1.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog1.jpg)
 
 
 
@@ -100,7 +100,9 @@ Step 2. Add the dependency
         //layoutView.findViewById<TextView>(R.id.dialog_msg_title1).textSize=16f
         //layoutView.findViewById<TextView>(R.id.dialog_msg_cancel1).textSize=16f
         //layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1).textSize=16f
-![此处输入图片的描述][2]
+        
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog1.1.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog1.1.jpg)
+
 样式2-自带Dialog
 ------------
  - 简单版
@@ -122,7 +124,7 @@ Step 2. Add the dependency
                         alertDialogUtils.cancel()
                     }
                 })
-    ![此处输入图片的描述][3]            
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.jpg)         
  - 完整版   
 
         alertDialogUtils =
@@ -156,7 +158,7 @@ Step 2. Add the dependency
 //        layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1).textSize=16f
  
 
- ![此处输入图片的描述][4]
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.1.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.1.jpg) 
 
 ## 样式三-自定义Dialog ##
 
@@ -182,5 +184,5 @@ Step 2. Add the dependency
                 }
             })
             
-![此处输入图片的描述][5]    
-  
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)    
+   
