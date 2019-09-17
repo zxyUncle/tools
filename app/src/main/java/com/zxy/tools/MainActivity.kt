@@ -53,13 +53,6 @@ class MainActivity : AppCompatActivity() {
             AlertDialogUtils
                 .build(this)
                 .showStyle2()                   //必选    显示样式2
-//                .setTransparency(0.4f)          //可选    设置窗口透明度，默认0.5
-//                .setTitle("张三疯标题")          //可选    设置标题
-//                .setConfirm("你好")              //可选    确定按钮文案
-//                .setCancel("我不好")             //可选    取消按钮文案
-//                .setTitleColor(resources.getColor(R.color.colorPrimaryDark,null)) //或者 0xD81B60      //可选  设置标题颜色
-//                .setConfirmColor(resources.getColor(R.color.colorPrimaryDark,null)) //或者 0xD81B60    //可选  确定按钮颜色
-//                .setCancelColor(resources.getColor(R.color.colorPrimaryDark,null)) //或者 0xD81B60     //可选  取消按钮颜色
                 .create(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
                     override fun onClickDialog(view: View) {
                         when (view.id) {
@@ -78,14 +71,15 @@ class MainActivity : AppCompatActivity() {
 //        layoutView.findViewById<TextView>(R.id.dialog_msg_title1).textSize=16f
 //        layoutView.findViewById<TextView>(R.id.dialog_msg_cancel1).textSize=16f
 //        layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1).textSize=16f
+
     }
 
     fun onCoustDikaog(view: View) {
         alertDialogUtils = AlertDialogUtils.build(this)
-            .setView(R.layout.dialog_button)    //设置布局View
-            .setCancelable(true)                //设置是否可以取消，默认true
-            .setTransparency(0f)                //设置窗口透明度，默认0.5
-            .setOnClick(R.id.but1, R.id.but2, R.id.but3)    //设置布局的点击事件
+            .setView(R.layout.dialog_button)    //必选 设置布局View
+            .setCancelable(true)                //可选 设置是否可以取消，默认true
+            .setTransparency(0f)                //可选 设置窗口透明度，默认0.5
+            .setOnClick(R.id.but1, R.id.but2, R.id.but3)    //可选 设置布局的点击事件
             .create(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
                 override fun onClickDialog(view: View) {
                     when (view.id) {
