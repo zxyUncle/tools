@@ -33,7 +33,7 @@
             >
 
                 <TextView
-                        android:id="@+id/dialog_msg_title"
+                        android:id="@+id/dialog_msg_title2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
@@ -41,7 +41,7 @@
                         android:padding="30dp"
                         android:text="确认添加后将短信添加给对方"
                         android:textColor="#333333"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                 />
             </LinearLayout>
 
@@ -59,7 +59,7 @@
             >
 
                 <TextView
-                        android:id="@+id/dialog_msg_confirm"
+                        android:id="@+id/dialog_msg_confirm2"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                 />
 
                 <TextView
-                        android:id="@+id/dialog_msg_cancel"
+                        android:id="@+id/dialog_msg_cancel2"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"

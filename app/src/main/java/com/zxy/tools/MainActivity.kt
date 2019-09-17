@@ -3,6 +3,7 @@ package com.zxy.tools
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import com.zxy.zxytools.AlertDialogUtils
 
@@ -18,34 +19,70 @@ class MainActivity : AppCompatActivity() {
         alertDialogUtils =
             AlertDialogUtils
                 .build(this)
-                .setTransparency(0.4f)
-                .showStyle1(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
+                .showStyle1()                   //必选  显示样式1
+//                .setTransparency(0.4f)          //可选  设置窗口透明度，默认0.5
+//                .setTitle("我是元婴期")          //可选  设置标题
+//                .setConfirm("左手大保健")        //可选  确定按钮文案
+//                .setCancel("右手打和尚")         //可选  取消按钮文案
+//                .setTitleColor(resources.getColor(R.color.colorAccent,null)) //或者 0xD81B60      //可选  设置标题颜色
+//                .setConfirmColor(resources.getColor(R.color.colorAccent,null)) //或者 0xD81B60    //可选  确定按钮颜色
+//                .setCancelColor(resources.getColor(R.color.colorAccent,null)) //或者 0xD81B60     //可选  取消按钮颜色
+                .create(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
                     override fun onClickDialog(view: View) {
                         when (view.id) {
-                            R.id.dialog_msg_confirm -> {
+                            R.id.dialog_msg_confirm1 -> {
                                 Toast.makeText(this@MainActivity, "确定", Toast.LENGTH_SHORT).show()
                             }
-                            R.id.dialog_msg_cancel -> {
+                            R.id.dialog_msg_cancel1 -> {
                                 Toast.makeText(this@MainActivity, "取消", Toast.LENGTH_SHORT).show()
                             }
                         }
                         alertDialogUtils.cancel()
                     }
                 })
+        //可选  设置按钮的字体大小，文字样式等等
+//        val layoutView = alertDialogUtils.layoutView
+//        layoutView.findViewById<TextView>(R.id.dialog_msg_title1).textSize=16f
+//        layoutView.findViewById<TextView>(R.id.dialog_msg_cancel1).textSize=16f
+//        layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1).textSize=16f
+
     }
 
     fun onStyle2(view: View) {
+
         alertDialogUtils =
             AlertDialogUtils
                 .build(this)
-                .setTransparency(0.8f)
-                .showStyle2(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
+                .showStyle1()                   //显示样式1 0xD81B60
+                .create(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
                     override fun onClickDialog(view: View) {
                         when (view.id) {
-                            R.id.dialog_msg_confirm -> {
+                            R.id.dialog_msg_confirm1 -> {
                                 Toast.makeText(this@MainActivity, "确定", Toast.LENGTH_SHORT).show()
                             }
-                            R.id.dialog_msg_cancel -> {
+                            R.id.dialog_msg_cancel1 -> {
+                                Toast.makeText(this@MainActivity, "取消", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                        alertDialogUtils.cancel()
+                    }
+                })
+
+        alertDialogUtils =
+            AlertDialogUtils
+                .build(this)
+                .showStyle2()                   //显示样式2
+                .setTransparency(0.4f)         //设置窗口透明度，默认0.5
+                .setTitle("张三疯标题")
+                .setConfirm("你好")
+                .setCancel("我不好")
+                .create(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
+                    override fun onClickDialog(view: View) {
+                        when (view.id) {
+                            R.id.dialog_msg_confirm2 -> {
+                                Toast.makeText(this@MainActivity, "确定", Toast.LENGTH_SHORT).show()
+                            }
+                            R.id.dialog_msg_cancel2 -> {
                                 Toast.makeText(this@MainActivity, "取消", Toast.LENGTH_SHORT).show()
                             }
                         }
@@ -56,11 +93,11 @@ class MainActivity : AppCompatActivity() {
 
     fun onCoustDikaog(view: View) {
         alertDialogUtils = AlertDialogUtils.build(this)
-            .setView(R.layout.dialog_button)
-            .setCancelable(true)
-            .setTransparency(0f)
-            .setOnClick(R.id.but1, R.id.but2, R.id.but3)
-            .show(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
+            .setView(R.layout.dialog_button)    //设置布局View
+            .setCancelable(true)                //设置是否可以取消，默认true
+            .setTransparency(0f)                //设置窗口透明度，默认0.5
+            .setOnClick(R.id.but1, R.id.but2, R.id.but3)    //设置布局的点击事件
+            .create(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
                 override fun onClickDialog(view: View) {
                     when (view.id) {
                         R.id.but1 -> {
@@ -73,7 +110,7 @@ class MainActivity : AppCompatActivity() {
                             Toast.makeText(this@MainActivity, "but3", Toast.LENGTH_SHORT).show()
                         }
                     }
-                    alertDialogUtils.cancel()
+                    alertDialogUtils.cancel()   //取消Dialog
                 }
             })
     }
