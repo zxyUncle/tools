@@ -4,7 +4,6 @@
 
 [![](https://jitpack.io/v/zxyUncle/tools.svg)](https://jitpack.io/#zxyUncle/tools)
 
-
 Gradle
 -----
 Step 1
@@ -107,23 +106,24 @@ Step 2. Add the dependency
 ------------
  - 简单版
 
-    alertDialogUtils =
+            alertDialogUtils =
             AlertDialogUtils
                 .build(this)
-                .setTransparency(0.8f)  //设置窗口透明度，默认0.5
-                .showStyle2(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
+                .showStyle2()                   //必选    显示样式2
+                .create(object : AlertDialogUtils.Builder.AlertDialogUtilsListener {
                     override fun onClickDialog(view: View) {
                         when (view.id) {
-                            R.id.dialog_msg_confirm -> {
+                            R.id.dialog_msg_confirm2 -> {
                                 Toast.makeText(this@MainActivity, "确定", Toast.LENGTH_SHORT).show()
                             }
-                            R.id.dialog_msg_cancel -> {
+                            R.id.dialog_msg_cancel2 -> {
                                 Toast.makeText(this@MainActivity, "取消", Toast.LENGTH_SHORT).show()
                             }
                         }
                         alertDialogUtils.cancel()
                     }
                 })
+
 [![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.jpg)         
  - 完整版   
 
@@ -185,4 +185,4 @@ Step 2. Add the dependency
             })
             
 [![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)    
-   
+  
