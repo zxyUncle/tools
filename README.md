@@ -6,8 +6,8 @@
 # [2.万能Popwindow 建造者模式+kotlin](#link2)
 
 
-######link1
-
+link1
+-----------
 ## 万能AlertDialog 建造者模式+kotlin    
 
 [![](https://jitpack.io/v/zxyUncle/tools.svg)](https://jitpack.io/#zxyUncle/tools)
@@ -193,6 +193,7 @@ Step 2. Add the dependency
             
 [![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)    
 
-######link2
+link2
+-----------
 ## 2.万能Popwindow 建造者模式+kotlin
             
