@@ -1,14 +1,19 @@
-# Android Java Kotlin 各种工具 -张三疯
 
-# 1. 万能AlertDialog 建造者模式+kotlin
+
+
+# Android Java Kotlin 各种工具 -张三疯 
+# [1.万能AlertDialog 建造者模式+kotlin](#link1)
+# [2.万能Popwindow 建造者模式+kotlin](#link2)
+
+
+
 
 [![](https://jitpack.io/v/zxyUncle/tools.svg)](https://jitpack.io/#zxyUncle/tools)
 
 Gradle
 -----
 Step 1
-
-	allprojects {
+	 allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
@@ -40,7 +45,10 @@ Step 2. Add the dependency
 
  
  
-
+link1
+-----------
+## 万能AlertDialog 建造者模式+kotlin 
+   
 样式1-自带Dialog
 ---
 
@@ -185,4 +193,8 @@ Step 2. Add the dependency
             })
             
 [![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)    
-  
+
+link2
+-----------
+## 2.万能Popwindow 建造者模式+kotlin
+            
