@@ -43,7 +43,7 @@ dependencies {
     api 'com.android.support:design:29.0.0'
 
     //logcat https://github.com/orhanobut/logger
-//    api 'com.orhanobut:logger:2.2.0'
+    api 'com.orhanobut:logger:2.2.0'
 
 
 }
