@@ -1,4 +1,4 @@
-package com.zxy.zxytools
+package com.zxy.zxytools.dialog
 
 import android.app.AlertDialog
 import android.content.Context
@@ -8,6 +8,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.tools_zxy_dialog_msg1.view.*
 import android.view.WindowManager
 import android.widget.TextView
+import com.zxy.zxytools.R
 import kotlinx.android.synthetic.main.tools_zxy_dialog_msg2.view.*
 
 
@@ -130,7 +131,7 @@ class AlertDialogUtils private constructor() {
          * 设置自定义样式的标题颜色
          * @param color Int
          */
-        fun setTitleColor(color:Int):Builder{
+        fun setTitleColor(color:Int): Builder {
             if (alertDialogUtils.TYPE == 1) {
                 var tvTitle1 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_title1)
                 tvTitle1.setTextColor(color)
@@ -159,7 +160,7 @@ class AlertDialogUtils private constructor() {
          * 设置自定义样式的确定颜色
          * @param color Int
          */
-        fun setConfirmColor(color:Int):Builder{
+        fun setConfirmColor(color:Int): Builder {
             if (alertDialogUtils.TYPE == 1) {
                 var tvConfirm1 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1)
                 tvConfirm1.setTextColor(color)

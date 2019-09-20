@@ -3,15 +3,65 @@ package com.zxy.tools
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import android.widget.Toast
-import com.zxy.zxytools.AlertDialogUtils
+import com.orhanobut.logger.AndroidLogAdapter
+import com.orhanobut.logger.Logger
+import com.orhanobut.logger.PrettyFormatStrategy
+import com.zxy.zxytools.dialog.AlertDialogUtils
+import com.zxy.zxytools.logger.LoggerUtils
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var alertDialogUtils: AlertDialogUtils
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //https://github.com/orhanobut/logger
+        LoggerUtils.init("msg")
+        Logger.d("debug")
+        Logger.e("error")
+        Logger.w("warning")
+        Logger.v("verbose")
+        Logger.t("121").i("information")
+        Logger.xml("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "          package=\"com.zxy.tools\">\n" +
+                "\n" +
+                "    <application\n" +
+                "            android:allowBackup=\"true\"\n" +
+                "            android:icon=\"@mipmap/ic_launcher\"\n" +
+                "            android:label=\"@string/app_name\"\n" +
+                "            android:roundIcon=\"@mipmap/ic_launcher_round\"\n" +
+                "            android:supportsRtl=\"true\"\n" +
+                "            android:theme=\"@style/AppTheme\">\n" +
+                "        <activity android:name=\".MainActivity\">\n" +
+                "            <intent-filter>\n" +
+                "                <action android:name=\"android.intent.action.MAIN\"/>\n" +
+                "\n" +
+                "                <category android:name=\"android.intent.category.LAUNCHER\"/>\n" +
+                "            </intent-filter>\n" +
+                "        </activity>\n" +
+                "    </application>\n" +
+                "\n" +
+                "</manifest>")
+        Logger.json("{\n" +
+                "    \"code\": \"00\",\n" +
+                "    \"msg\": \"success\",\n" +
+                "    \"data\": {\n" +
+                "        \"uid\": \"201874\",\n" +
+                "        \"type\": \"F\",\n" +
+                "        \"channel\": \"\",\n" +
+                "        \"userName\": \"18501617787\",\n" +
+                "        \"avatar\": \"U/20181128/038e56ebc74448f0ba7333999cd57857\",\n" +
+                "        \"accessToken\": \"A1E2LzxhUGFZvZyFAwzs70G6lx40cUBmVQIqhFiEYX/b4mQ=\",\n" +
+                "        \"tokenType\": \"Bearer\",\n" +
+                "        \"expires\": 604800,\n" +
+                "        \"refreshToken\": \"439cd7cb2a69a011\",\n" +
+                "        \"timestamp\": 1568890345144,\n" +
+                "        \"inviteCode\": \"3640\",\n" +
+                "        \"isExist\": 0\n" +
+                "    }\n" +
+                "}")
     }
 
 
