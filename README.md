@@ -207,7 +207,7 @@ Step 2. Add the dependency
 
  1. 初始化：什么时候都行，最好在Application中初始化（可以多次初始化）
     包名：com.zxy.zxytools.logger.LoggerUtils
-    LoggerUtils.init("msg") //msg是默认的日志过滤TAG
+    **LoggerUtils.init("msg")** //msg是默认的日志过滤TAG     
  2. 使用：  
         包名：com.orhanobut.logger.Logger
         **Logger.d("debug")**  
