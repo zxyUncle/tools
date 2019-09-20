@@ -210,16 +210,16 @@ Step 2. Add the dependency
     LoggerUtils.init("msg") //msg是默认的日志过滤TAG
  2. 使用：  
         包名：com.orhanobut.logger.Logger
-        **Logger.d("debug")**
-        **Logger.e("error")
-        Logger.w("warning")
-        Logger.v("verbose")
-        Logger.i("information");
-        Logger.t("121").i("information");   //使用临时的日志过滤TAG，也可以使用默认的msg TAG
-        特殊的：
-        Logger.xml(）//输出xml，可以使activlti_main.xml或者androidmanifast.xml等
-        Logger.json("字符串json")                   //输出json
-        Logger.json(new Gson().toJson(UserBean))    //输出json**
+        **Logger.d("debug")**  
+        **Logger.e("error")   
+        Logger.w("warning")    
+        Logger.v("verbose")    
+        Logger.i("information");    
+        Logger.t("121").i("information");   //使用临时的日志过滤TAG，也可以使用默认的msg TAG     
+        特殊的：   
+        Logger.xml(）//输出xml，可以使activlti_main.xml或者androidmanifast.xml等    
+        Logger.json("字符串json")                   //输出json     
+        Logger.json(new Gson().toJson(UserBean))    //输出json**    
 
         例：        Logger.json("{\n" +
                 "    \"code\": \"00\",\n" +
@@ -245,11 +245,13 @@ Step 2. Add the dependency
 
  4. 设置各个日志级别的颜色
     我的配置颜色：
-    **Assert --- E170D6
-    Debug --- 0091E1
-    Error ---FF5F5F
-    Info --- 56E13E
-    Verbose --- E1E1E1
-    Warning --- E1E125**
+    **Assert --- E170D6    
+    Debug --- 0091E1     
+    Error ---FF5F5F       
+    Info --- 56E13E    
+    Verbose --- E1E1E1      
+    Warning --- E1E125**    
 
-[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)    
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)     
+
+ 
