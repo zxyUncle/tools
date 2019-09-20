@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //https://github.com/orhanobut/logger
         LoggerUtils.init("msg")
-        Logger.d("debug")
-        Logger.e("error")
-        Logger.w("warning")
-        Logger.v("verbose")
+        Logger.d("debug 输出信息")
+        Logger.e("error 输出信息")
+        Logger.w("warning 输出信息")
+        Logger.v("verbose 输出信息")
         Logger.t("121").i("information")
         Logger.xml("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
