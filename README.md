@@ -21,7 +21,7 @@ Step 1
 
 Step 2. Add the dependency
 
-        implementation 'com.github.zxyUncle:tools:1.6'
+        implementation 'com.github.zxyUncle:tools:Tag'
 
 Maven
 -----
