@@ -60,11 +60,38 @@ fun MultiStateView.setLoading(layoutRes: Int,status:MultiStateView.ViewState=Mul
     this.viewState = status
 }
 /**
- * 显示指定的布局-默认内容布局
+ * 显示指定的布局-内容布局
  * @receiver MultiStateView
  * @param status ViewState
  */
-fun MultiStateView.setVisibility(status:MultiStateView.ViewState=MultiStateView.ViewState.CONTENT){
+fun MultiStateView.setVisibilityContent(status:MultiStateView.ViewState=MultiStateView.ViewState.CONTENT){
     //显示指定的布局
-    this.viewState = MultiStateView.ViewState.CONTENT
+    this.viewState = status
+}
+/**
+ * 显示指定的布局-内容布局
+ * @receiver MultiStateView
+ * @param status ViewState
+ */
+fun MultiStateView.setVisibilityEmpty(status:MultiStateView.ViewState=MultiStateView.ViewState.EMPTY){
+    //显示指定的布局
+    this.viewState = status
+}
+/**
+ * 显示指定的布局-内容布局
+ * @receiver MultiStateView
+ * @param status ViewState
+ */
+fun MultiStateView.setVisibilityError(status:MultiStateView.ViewState=MultiStateView.ViewState.ERROR){
+    //显示指定的布局
+    this.viewState = status
+}
+/**
+ * 显示指定的布局-内容布局
+ * @receiver MultiStateView
+ * @param status ViewState
+ */
+fun MultiStateView.setVisibilityLoading(status:MultiStateView.ViewState=MultiStateView.ViewState.LOADING){
+    //显示指定的布局
+    this.viewState = status
 }
