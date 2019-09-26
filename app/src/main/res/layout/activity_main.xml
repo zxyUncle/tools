@@ -11,24 +11,11 @@
 
 
         <Button
-                android:onClick="onStyle1"
+                android:id="@+id/btn_main"
                 android:text="弹出框1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
 
-        <Button
-                android:onClick="onStyle2"
-                android:text="弹出框2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        <Button
-                android:onClick="onCoustDikaog"
-                android:text="自定义弹出框"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
 
 </LinearLayout>

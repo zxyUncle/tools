@@ -1,4 +1,4 @@
-package com.zxy.zxytools.dialog
+package com.zxy.zxytools.logger
 
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
@@ -8,7 +8,7 @@ import com.orhanobut.logger.PrettyFormatStrategy
  * Created by zxy on 2019/9/20-13:14
  * Class functions
  * ******************************************
- * *123
+ * *
  * ******************************************
  */
 class LoggerUtils {

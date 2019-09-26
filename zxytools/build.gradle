@@ -45,5 +45,11 @@ dependencies {
     //logcat https://github.com/orhanobut/logger
     api 'com.orhanobut:logger:2.2.0'
 
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //多状态布局-https://github.com/Kennyc1012/MultiStateView
+    implementation  'com.github.Kennyc1012:MultiStateView:2.1'
+
 
 }
