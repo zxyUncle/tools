@@ -21,7 +21,7 @@ Step 1
 
 Step 2. Add the dependency
 
-        implementation 'com.github.zxyUncle:tools:1.0'
+        implementation 'com.github.zxyUncle:tools:1.6'
 
 Maven
 -----
@@ -207,7 +207,7 @@ Step 2. Add the dependency
 
  1. 初始化：什么时候都行，最好在Application中初始化（可以多次初始化）
     包名：com.zxy.zxytools.logger.LoggerUtils
-    LoggerUtils.init("msg") //msg是默认的日志过滤TAG
+    **LoggerUtils.init("msg")** //msg是默认的日志过滤TAG     
  2. 使用：  
         包名：com.orhanobut.logger.Logger
         **Logger.d("debug")**  
@@ -244,14 +244,23 @@ Step 2. Add the dependency
 [![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger2.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger2.png)      
 
  4. 设置各个日志级别的颜色
-    我的配置颜色：
+    我的配置颜色：     
     **Assert --- E170D6    
     Debug --- 0091E1     
     Error ---FF5F5F       
     Info --- 56E13E    
     Verbose --- E1E1E1      
     Warning --- E1E125**    
+  
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)    
 
-[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)     
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger4.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger4.png) 
 
+
+##更新：
+
+ 1.6. 日志工具    
  
+ 
+ 
+######持续更新---------
