@@ -196,8 +196,25 @@ Step 2. Add the dependency
 ### link2
 -----------
 ## 2.万能Popwindow 建造者模式+kotlin
-       
-       
+  实例：底部弹出popwindow，示例布局：popwindow_headimg.xml
+
+        var viewLayout = LayoutInflater.from(this).inflate(R.layout.popwindow_headimg, null)
+        val popwindowUtils = PopwindowUtils(this)
+        popwindowUtils.showPop(viewLayout, viewLayout)
+        viewLayout.tv_headimg_camera.clickWithTrigger {
+            var dialIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phone"));//跳转到拨号界面，同时传递电话号码
+            startActivity(dialIntent);
+            popwindowUtils.dismiss()//取消
+        }
+        viewLayout.tv_headimg_cancle.clickWithTrigger {
+            popwindowUtils.dismiss()//取消
+        }
+
+
+
+
+
+
 ### link3
 -----------
 ## 3.Logger 格式化日志 --转载[Logger][1]

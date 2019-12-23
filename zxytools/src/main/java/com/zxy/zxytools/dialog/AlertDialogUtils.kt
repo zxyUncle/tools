@@ -12,6 +12,7 @@ import com.zxy.zxytools.R
 import kotlinx.android.synthetic.main.tools_zxy_dialog_msg2.view.*
 
 
+
 /**
  * Created by zxy on 2019/8/24-10:13
  * Class functions
@@ -25,7 +26,7 @@ class AlertDialogUtils private constructor() {
     private var cancelable: Boolean = true                          //是否可以取消  true可以
     lateinit var dialog: AlertDialog                        // AlertDilaog
     lateinit var alertDilaogBuilder: AlertDialog.Builder    // AlertDilaog.Builder
-    lateinit var listView: MutableList<Int>
+    var listView: MutableList<Int>? = null
     var transparency: Float = 0.5f                              // 透明度
     var TYPE: Int = 4                                           //三种类型 1=样式1    2=样式2     3=自定义样式  4=自定义布局不能为null
 
@@ -127,11 +128,12 @@ class AlertDialogUtils private constructor() {
             }
             return this
         }
+
         /**
          * 设置自定义样式的标题颜色
          * @param color Int
          */
-        fun setTitleColor(color:Int): Builder {
+        fun setTitleColor(color: Int): Builder {
             if (alertDialogUtils.TYPE == 1) {
                 var tvTitle1 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_title1)
                 tvTitle1.setTextColor(color)
@@ -156,11 +158,12 @@ class AlertDialogUtils private constructor() {
             }
             return this
         }
+
         /**
          * 设置自定义样式的确定颜色
          * @param color Int
          */
-        fun setConfirmColor(color:Int): Builder {
+        fun setConfirmColor(color: Int): Builder {
             if (alertDialogUtils.TYPE == 1) {
                 var tvConfirm1 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1)
                 tvConfirm1.setTextColor(color)
@@ -185,6 +188,7 @@ class AlertDialogUtils private constructor() {
             }
             return this
         }
+
         /**
          * 设置自定义样式的取消颜色
          * @param confirm String
@@ -203,7 +207,7 @@ class AlertDialogUtils private constructor() {
         /**
          * 创建AlertDialog
          */
-        fun create(alertDialogUtilsListener: AlertDialogUtilsListener): AlertDialogUtils {
+        fun create(alertDialogUtilsListener: AlertDialogUtilsListener? = null): AlertDialogUtils {
             alertDialogUtils.alertDilaogBuilder = AlertDialog.Builder(mContext, R.style.MyDilog)
             alertDialogUtils.alertDilaogBuilder.setView(alertDialogUtils.layoutView)
             alertDialogUtils.dialog = alertDialogUtils.alertDilaogBuilder.create()
@@ -215,39 +219,41 @@ class AlertDialogUtils private constructor() {
             lp.height = WindowManager.LayoutParams.WRAP_CONTENT
             alertDialogUtils.dialog.window!!.setDimAmount(alertDialogUtils.transparency)//设置黑色遮罩层的透明度
             alertDialogUtils.dialog.window!!.setAttributes(lp)
-
-            when (alertDialogUtils.TYPE) {
-                1 -> {//样式1
-                    alertDialogUtils.layoutView.dialog_msg_confirm1.setOnClickListener {
-                        alertDialogUtilsListener.onClickDialog(it)
+            if (alertDialogUtilsListener != null) {
+                when (alertDialogUtils.TYPE) {
+                    1 -> {//样式1
+                        alertDialogUtils.layoutView.dialog_msg_confirm1.setOnClickListener {
+                            alertDialogUtilsListener!!.onClickDialog(it)
+                        }
+                        alertDialogUtils.layoutView.dialog_msg_cancel1.setOnClickListener {
+                            alertDialogUtilsListener!!.onClickDialog(it)
+                        }
                     }
-                    alertDialogUtils.layoutView.dialog_msg_cancel1.setOnClickListener {
-                        alertDialogUtilsListener.onClickDialog(it)
+                    2 -> {
+                        alertDialogUtils.layoutView.dialog_msg_confirm2.setOnClickListener {
+                            alertDialogUtilsListener!!.onClickDialog(it)
+                        }
+                        alertDialogUtils.layoutView.dialog_msg_cancel2.setOnClickListener {
+                            alertDialogUtilsListener!!.onClickDialog(it)
+                        }
                     }
-                }
-                2 -> {
-                    alertDialogUtils.layoutView.dialog_msg_confirm2.setOnClickListener {
-                        alertDialogUtilsListener.onClickDialog(it)
-                    }
-                    alertDialogUtils.layoutView.dialog_msg_cancel2.setOnClickListener {
-                        alertDialogUtilsListener.onClickDialog(it)
-                    }
-                }
-                3 -> {
-                    for (index in 0 until alertDialogUtils.listView.size step 1) {
-                        alertDialogUtils.layoutView.findViewById<View>(alertDialogUtils.listView[index])
-                            .setOnClickListener {
-                                alertDialogUtilsListener.onClickDialog(it)
+                    3 -> {
+                        if (alertDialogUtils.listView != null) {
+                            for (index in 0 until alertDialogUtils.listView!!.size step 1) {
+                                alertDialogUtils.layoutView.findViewById<View>(alertDialogUtils.listView!![index])
+                                    .setOnClickListener {
+                                        alertDialogUtilsListener!!.onClickDialog(it)
+                                    }
                             }
+                        }
                     }
-                }
-                else -> {
-                    Toast.makeText(mContext, "AlertDilaog的setView()不能为null", Toast.LENGTH_SHORT).show()
+                    else -> {
+                        Toast.makeText(mContext, "AlertDilaog的setView()不能为null", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
             return alertDialogUtils
         }
-
 
     }
 

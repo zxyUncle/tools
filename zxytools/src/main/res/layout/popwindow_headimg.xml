@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:orientation="vertical"
+        android:padding="4dp"
+        >
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round_while_4"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+        <TextView
+                android:id="@+id/tv_headimg_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="呼叫（021）54500210"
+                android:textColor="#0098F0"
+                android:textSize="16sp"
+                />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_round_while_4"
+            android:padding="10dp"
+            >
+
+        <TextView
+                android:id="@+id/tv_headimg_cancle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="取消"
+                android:textColor="#0098F0"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+    </LinearLayout>
+
+</LinearLayout>
