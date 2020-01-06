@@ -1,10 +1,22 @@
 package com.kd.kotlin.extend.utils
 
+import android.view.View
 import android.widget.TextView
 
 /**
- * 设置颜色直接使用colors.xml中定义的颜色即可
+ * Created by zxy on 2020/1/6 0006 14:21
+ * ******************************************
+ * *
+ * ******************************************
  */
+fun TextView.zxyText(content: String?) {
+    if (content == null) {
+        this.zxyVisible()
+    } else {
+        this.zxyVisible(0)
+        this.text = content
+    }
+}
 fun TextView.setColor(resId: Int) {
     this.setTextColor(resources.getColor(resId))
 }

@@ -10,14 +10,16 @@ import android.view.View
  */
 
 /**
- * 控件的显示跟隐藏
- * @receiver View
- * @param isShow Boolean 默认true
+ * visible:0-VISIBLE
+ *  visible:1-GONE
+ *   visible:orther-INVISIBLE
  */
-fun View.visibility(isShow:Boolean = true){
-    if(isShow){
+fun View.zxyVisible(visible: Int = 2) {
+    if (visible == 0) {
         this.visibility = View.VISIBLE
-    }else{
+    } else if (visible == 1) {
         this.visibility = View.GONE
+    } else {
+        this.visibility = View.INVISIBLE
     }
 }

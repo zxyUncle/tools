@@ -1,4 +1,4 @@
-package com.kd.kotlin.extend.utils
+package com.zxy.zxytools.extension
 
 import android.app.Activity
 import android.content.pm.ActivityInfo
@@ -8,9 +8,6 @@ import android.util.DisplayMetrics
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
-
-
-
 /**
  * 屏幕截图
  */
