@@ -276,7 +276,8 @@ Step 2. Add the dependency
 
 ##更新：
 
- 1.6. 日志工具    
+ 1.6.6 日志工具
+ 1.6.7 增加MyIntent跳转动画
  
  
  
