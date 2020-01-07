@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="prompt_success">#5CC231</color>
+    <color name="prompt_error">#ff0000</color>
+    <color name="prompt_warning">#3D55F0</color>
+</resources>

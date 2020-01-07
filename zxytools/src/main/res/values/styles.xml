@@ -1,4 +1,5 @@
 <resources>
+
     <style name="loadingdialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsFloating">true</item>
@@ -15,8 +16,13 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
-    <style name="popwin_anim_style" parent="android:Animation">
-        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
-        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    <style name="popwin_anim_style_bottom" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim_bottom</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim_bottom</item>
+    </style>
+
+    <style name="popwin_anim_style_top" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim_top</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim_top</item>
     </style>
 </resources>

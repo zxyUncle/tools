@@ -9,14 +9,14 @@
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:background="@drawable/shape_round_while_4"
+            android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp"
             >
 
         <TextView
-                android:id="@+id/tv_headimg_camera"
+                android:id="@+id/tvPopMsg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackgroundBorderless"

@@ -273,12 +273,31 @@ Step 2. Add the dependency
 
 [![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger4.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger4.png) 
 
+### link3
+-----------
+## 4.Intent 意图跳转动画及转场动画
+  [1]: https://github.com/orhanobut/logger
+
+###使用：
+
+### link3
+-----------
+
+     MyIntent.startActivityAnimation(this, FirstActivity::class.java)
+
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/intent.gif)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/intent.gif)
+## 3.顶部弹出Toast   
+###使用：
+
+     ZToast.showI(this,"账号或者密码错误")
+
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/toast.gif)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/toast.gif)
 
 ##更新：
 
  1.6.6 日志工具
  1.6.7 增加MyIntent跳转动画
- 
+ 1.6.8 顶部弹出Toast
  
  
 ######持续更新---------

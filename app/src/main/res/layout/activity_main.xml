@@ -5,8 +5,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="#000000"
+        android:orientation="vertical"
         tools:context=".MainActivity"
         >
 
@@ -18,5 +18,16 @@
             android:text="弹出框1"
             />
 
-
+    <Button
+            android:id="@+id/btn_main_toast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toast"
+            />
+    <Button
+            android:id="@+id/btn_main_toast1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toast1"
+            />
 </LinearLayout>
