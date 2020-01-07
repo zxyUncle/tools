@@ -3,6 +3,8 @@
 # [1.万能AlertDialog 建造者模式+kotlin](#link1)
 # [2.万能Popwindow 建造者模式+kotlin](#link2)
 # [3.Logger 格式化日志](#link3)
+# [4.MyIntent 跳转动画](#link4)
+# [5.ZToast 顶部弹出Toast](#link5)
 
 
 
@@ -42,12 +44,12 @@ Step 2. Add the dependency
 	    <version>Tag</version>
 	</dependency>
 
- 
- 
+
+
 ### link1
 -----------
-## 万能AlertDialog 建造者模式+kotlin 
-   
+## 万能AlertDialog 建造者模式+kotlin
+
 样式1-自带Dialog
 ---
 
@@ -106,7 +108,7 @@ Step 2. Add the dependency
         //layoutView.findViewById<TextView>(R.id.dialog_msg_title1).textSize=16f
         //layoutView.findViewById<TextView>(R.id.dialog_msg_cancel1).textSize=16f
         //layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1).textSize=16f
-        
+
 [![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog1.1.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog1.1.jpg)
 
 样式2-自带Dialog
@@ -131,8 +133,8 @@ Step 2. Add the dependency
                     }
                 })
 
-[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.jpg)         
- - 完整版   
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.jpg)
+ - 完整版
 
         alertDialogUtils =
             AlertDialogUtils
@@ -163,9 +165,9 @@ Step 2. Add the dependency
 //        layoutView.findViewById<TextView>(R.id.dialog_msg_title1).textSize=16f
 //        layoutView.findViewById<TextView>(R.id.dialog_msg_cancel1).textSize=16f
 //        layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1).textSize=16f
- 
 
-[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.1.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.1.jpg) 
+
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.1.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog2.1.jpg)
 
 ## 样式三-自定义Dialog ##
 
@@ -190,8 +192,8 @@ Step 2. Add the dependency
                     alertDialogUtils.cancel()   //取消Dialog
                 }
             })
-            
-[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)    
+
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/dialog3.jpg)
 
 ### link2
 -----------
@@ -224,19 +226,19 @@ Step 2. Add the dependency
 
  1. 初始化：什么时候都行，最好在Application中初始化（可以多次初始化）
     包名：com.zxy.zxytools.logger.LoggerUtils
-    **LoggerUtils.init("msg")** //msg是默认的日志过滤TAG     
- 2. 使用：  
+    **LoggerUtils.init("msg")** //msg是默认的日志过滤TAG
+ 2. 使用：
         包名：com.orhanobut.logger.Logger
-        **Logger.d("debug")**  
-        **Logger.e("error")   
-        Logger.w("warning")    
-        Logger.v("verbose")    
-        Logger.i("information");    
-        Logger.t("121").i("information");   //使用临时的日志过滤TAG，也可以使用默认的msg TAG     
-        特殊的：   
-        Logger.xml(）//输出xml，可以使activlti_main.xml或者androidmanifast.xml等    
-        Logger.json("字符串json")                   //输出json     
-        Logger.json(new Gson().toJson(UserBean))    //输出json**    
+        **Logger.d("debug")**
+        **Logger.e("error")
+        Logger.w("warning")
+        Logger.v("verbose")
+        Logger.i("information");
+        Logger.t("121").i("information");   //使用临时的日志过滤TAG，也可以使用默认的msg TAG
+        特殊的：
+        Logger.xml(）//输出xml，可以使activlti_main.xml或者androidmanifast.xml等
+        Logger.json("字符串json")                   //输出json
+        Logger.json(new Gson().toJson(UserBean))    //输出json**
 
         例：        Logger.json("{\n" +
                 "    \"code\": \"00\",\n" +
@@ -257,21 +259,21 @@ Step 2. Add the dependency
                 "    }\n" +
                 "}")`
  3. 效果图
-[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger1.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger1.png)     
-[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger2.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger2.png)      
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger1.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger1.png)
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger2.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger2.png)
 
  4. 设置各个日志级别的颜色
-    我的配置颜色：     
-    **Assert --- E170D6    
-    Debug --- 0091E1     
-    Error ---FF5F5F       
-    Info --- 56E13E    
-    Verbose --- E1E1E1      
-    Warning --- E1E125**    
-  
-[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)    
+    我的配置颜色：
+    **Assert --- E170D6
+    Debug --- 0091E1
+    Error ---FF5F5F
+    Info --- 56E13E
+    Verbose --- E1E1E1
+    Warning --- E1E125**
 
-[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger4.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger4.png) 
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger3.png)
+
+[![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger4.png)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/logger4.png)
 
 ### link3
 -----------
@@ -280,14 +282,16 @@ Step 2. Add the dependency
 
 ###使用：
 
-### link3
+### link4
 -----------
 
      MyIntent.startActivityAnimation(this, FirstActivity::class.java)
 
 [![](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/intent.gif)](https://raw.githubusercontent.com/zxyUncle/tools/master/picature/intent.gif)
-## 3.顶部弹出Toast   
+## 5.顶部弹出Toast
 ###使用：
+### link5
+-----------
 
      ZToast.showI(this,"账号或者密码错误")
 
@@ -298,6 +302,6 @@ Step 2. Add the dependency
  1.6.6 日志工具
  1.6.7 增加MyIntent跳转动画
  1.6.8 顶部弹出Toast
- 
- 
+
+
 ######持续更新---------
