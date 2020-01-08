@@ -1,5 +1,6 @@
 package com.zxy.zxytools.extension
 
+import android.util.Log
 import android.view.View
 
 /**
@@ -9,35 +10,36 @@ import android.view.View
  * * 点击事件的扩展-仿抖动
  * ******************************************
  */
-/***
- * 设置延迟时间的View扩展
- * @param delay Long 延迟时间，默认600毫秒
- * @return T
+
+/**
+ * 多个点击事件
  */
-fun <T : View> T.withTrigger(delay: Long = 600): T {
-    triggerDelay = delay
-    return this
+fun clicks(vararg view: View, block: (View) -> Unit) {
+    for (v in view) {
+        v?.clickWithTrigger {
+            block(v)
+        }
+    }
 }
 
-/***
- * 点击事件的View扩展
- * @param block: (T) -> Unit 函数
- * @return Unit
- */
-fun <T : View> T.click(block: (T) -> Unit) = setOnClickListener {
-    block(it as T)
-}
 
 /***
- * 带延迟过滤的点击事件View扩展
+ * 单个点击事件
  * @param delay Long 延迟时间，默认600毫秒
  * @param block: (T) -> Unit 函数
  * @return Unit
  */
-fun <T : View> T.clickWithTrigger(time: Long = 600, block: (T) -> Unit) {
+fun <T : View> T.clickWithTrigger(time: Long = 800, block: (T) -> Unit) {
+    var viewOld: View? = null
     triggerDelay = time
     setOnClickListener {
-        if (clickEnable()) {
+        if (it == viewOld) {
+            if (clickEnable()) {
+                viewOld = it
+                block(it as T)
+            }
+        } else {
+            viewOld = it
             block(it as T)
         }
     }
@@ -63,19 +65,4 @@ private fun <T : View> T.clickEnable(): Boolean {
     }
     triggerLastTime = currentClickTime
     return flag
-}
-
-/***
- * 带延迟过滤的点击事件监听，见[View.OnClickListener]
- * 延迟时间根据triggerDelay获取：600毫秒，不能动态设置
- */
-interface OnLazyClickListener : View.OnClickListener {
-
-    override fun onClick(v: View?) {
-        if (v?.clickEnable() == true) {
-            onLazyClick(v)
-        }
-    }
-
-    fun onLazyClick(v: View)
 }
