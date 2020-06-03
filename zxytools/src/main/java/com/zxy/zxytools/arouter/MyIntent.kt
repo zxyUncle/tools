@@ -148,6 +148,20 @@ class MyIntent {
         }
 
         /**
+         * 带参数的左右转场动画
+         * @param mContext Context
+         * @param zClass Class<*>
+         */
+        fun startActivityAnimation(mContext: Context, zClass: Class<*>,bundel: Bundle) {
+            val optionsCompat = ActivityOptionsCompat
+                .makeCustomAnimation(mContext, R.anim.translate_in, R.anim.translate_out)
+            val intent = Intent()
+            intent.setClass(mContext, zClass)
+            intent.putExtras(bundel)
+            mContext.startActivity(intent, optionsCompat.toBundle())
+        }
+
+        /**
          * 不带参数的上下转场动画
          * @param mContext Context
          * @param zClass Class<*>

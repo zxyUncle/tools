@@ -12,7 +12,6 @@ import com.zxy.zxytools.R
 import kotlinx.android.synthetic.main.tools_zxy_dialog_msg2.view.*
 
 
-
 /**
  * Created by zxy on 2019/8/24-10:13
  * Class functions
@@ -28,7 +27,8 @@ class AlertDialogUtils private constructor() {
     lateinit var alertDilaogBuilder: AlertDialog.Builder    // AlertDilaog.Builder
     var listView: MutableList<Int>? = null
     var transparency: Float = 0.5f                              // 透明度
-    var TYPE: Int = 4                                           //三种类型 1=样式1    2=样式2     3=自定义样式  4=自定义布局不能为null
+    var TYPE: Int =
+        4                                           //三种类型 1=样式1    2=样式2     3=自定义样式  4=自定义布局不能为null
 
     companion object {
         fun build(mContext: Context): Builder {
@@ -96,7 +96,8 @@ class AlertDialogUtils private constructor() {
          * @return Builder
          */
         fun showStyle1(): Builder {
-            alertDialogUtils.layoutView = LayoutInflater.from(mContext).inflate(R.layout.tools_zxy_dialog_msg1, null)
+            alertDialogUtils.layoutView =
+                LayoutInflater.from(mContext).inflate(R.layout.tools_zxy_dialog_msg1, null)
             alertDialogUtils.TYPE = 1
             return this
         }
@@ -108,7 +109,8 @@ class AlertDialogUtils private constructor() {
          * @return AlertDialogUtils
          */
         fun showStyle2(): Builder {
-            alertDialogUtils.layoutView = LayoutInflater.from(mContext).inflate(R.layout.tools_zxy_dialog_msg2, null)
+            alertDialogUtils.layoutView =
+                LayoutInflater.from(mContext).inflate(R.layout.tools_zxy_dialog_msg2, null)
             alertDialogUtils.TYPE = 2
             return this
         }
@@ -120,10 +122,12 @@ class AlertDialogUtils private constructor() {
          */
         fun setTitle(title: String): Builder {
             if (alertDialogUtils.TYPE == 1) {
-                var tvTitle1 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_title1)
+                var tvTitle1 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_title1)
                 tvTitle1.text = title
             } else if (alertDialogUtils.TYPE == 2) {
-                var tvTitle2 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_title2)
+                var tvTitle2 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_title2)
                 tvTitle2.text = title
             }
             return this
@@ -135,10 +139,12 @@ class AlertDialogUtils private constructor() {
          */
         fun setTitleColor(color: Int): Builder {
             if (alertDialogUtils.TYPE == 1) {
-                var tvTitle1 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_title1)
+                var tvTitle1 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_title1)
                 tvTitle1.setTextColor(color)
             } else if (alertDialogUtils.TYPE == 2) {
-                var tvTitle2 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_title2)
+                var tvTitle2 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_title2)
                 tvTitle2.setTextColor(color)
             }
             return this
@@ -150,10 +156,12 @@ class AlertDialogUtils private constructor() {
          */
         fun setConfirm(confirm: String): Builder {
             if (alertDialogUtils.TYPE == 1) {
-                var tvConfirm1 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1)
+                var tvConfirm1 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1)
                 tvConfirm1.text = confirm
             } else if (alertDialogUtils.TYPE == 2) {
-                var tvConfirm2 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_confirm2)
+                var tvConfirm2 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_confirm2)
                 tvConfirm2.text = confirm
             }
             return this
@@ -165,10 +173,12 @@ class AlertDialogUtils private constructor() {
          */
         fun setConfirmColor(color: Int): Builder {
             if (alertDialogUtils.TYPE == 1) {
-                var tvConfirm1 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1)
+                var tvConfirm1 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_confirm1)
                 tvConfirm1.setTextColor(color)
             } else if (alertDialogUtils.TYPE == 2) {
-                var tvConfirm2 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_confirm2)
+                var tvConfirm2 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_confirm2)
                 tvConfirm2.setTextColor(color)
             }
             return this
@@ -180,10 +190,12 @@ class AlertDialogUtils private constructor() {
          */
         fun setCancel(cancel: String): Builder {
             if (alertDialogUtils.TYPE == 1) {
-                var tvCancel1 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_cancel1)
+                var tvCancel1 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_cancel1)
                 tvCancel1.text = cancel
             } else if (alertDialogUtils.TYPE == 2) {
-                var tvCance2 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_cancel2)
+                var tvCance2 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_cancel2)
                 tvCance2.text = cancel
             }
             return this
@@ -195,10 +207,12 @@ class AlertDialogUtils private constructor() {
          */
         fun setCancelColor(color: Int): Builder {
             if (alertDialogUtils.TYPE == 1) {
-                var tvCancel1 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_cancel1)
+                var tvCancel1 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_cancel1)
                 tvCancel1.setTextColor(color)
             } else if (alertDialogUtils.TYPE == 2) {
-                var tvCance2 = alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_cancel2)
+                var tvCance2 =
+                    alertDialogUtils.layoutView.findViewById<TextView>(R.id.dialog_msg_cancel2)
                 tvCance2.setTextColor(color)
             }
             return this
@@ -214,11 +228,11 @@ class AlertDialogUtils private constructor() {
             alertDialogUtils.dialog.setCancelable(alertDialogUtils.cancelable)
             alertDialogUtils.dialog.show()
 
-            val lp = alertDialogUtils.dialog.window!!.getAttributes()
+            val lp = alertDialogUtils.dialog.window!!.attributes
             lp.width = WindowManager.LayoutParams.MATCH_PARENT
             lp.height = WindowManager.LayoutParams.WRAP_CONTENT
             alertDialogUtils.dialog.window!!.setDimAmount(alertDialogUtils.transparency)//设置黑色遮罩层的透明度
-            alertDialogUtils.dialog.window!!.setAttributes(lp)
+            alertDialogUtils.dialog.window!!.attributes = lp
             if (alertDialogUtilsListener != null) {
                 when (alertDialogUtils.TYPE) {
                     1 -> {//样式1
@@ -248,7 +262,8 @@ class AlertDialogUtils private constructor() {
                         }
                     }
                     else -> {
-                        Toast.makeText(mContext, "AlertDilaog的setView()不能为null", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(mContext, "AlertDilaog的setView()不能为null", Toast.LENGTH_SHORT)
+                            .show()
                     }
                 }
             }

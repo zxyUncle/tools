@@ -27,7 +27,7 @@ class PopwindowUtils(mContext: Activity) {
      * view:位置
      * v：popwindow的布局
      */
-    fun showPop(view: View,v:View) {
+    fun showPop(view: View,v:View,alpha:Float) {
         popupWindow = PopupWindow(v, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         popupWindow!!.isTouchable = true
         popupWindow!!.isFocusable = true
@@ -36,7 +36,7 @@ class PopwindowUtils(mContext: Activity) {
 //        popupWindow.showAsDropDown(view, 0, 0, Gravity.BOTTOM);
         popupWindow!!.showAtLocation(view, Gravity.BOTTOM, 0, 0)
         //设置遮罩层
-        backgroundAlpha(0.5f)
+        backgroundAlpha(alpha)
         popupWindow!!.setOnDismissListener {
             backgroundAlpha(1f)
             //**重点，清理掉浮动的遮罩层，否则使用转场动画的时候会有黑色背景，因为dismiss是隐藏不是销毁
